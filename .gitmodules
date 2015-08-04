@@ -1,0 +1,3 @@
+[submodule "UCT2016"]
+	path = UCT2016
+	url = git@github.com:SridharaDasu/UCT2016.git

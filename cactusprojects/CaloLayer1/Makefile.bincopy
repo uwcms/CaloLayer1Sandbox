@@ -1,0 +1,16 @@
+RM=rm
+CP=cp -pd
+ECHO=echo
+SHELL=/bin/sh
+
+#.SILENT:
+
+build:  move
+
+move:
+        $(ECHO) '==> Copying library in $(Project)/rct/bin'
+        $(CP) $(BUILD_HOME)/$(Project)/$(Package)/bin/$(XDAQ_OS)/$(XDAQ_PLATFORM)/* $(BUILD_HOME)/$(Project)/rct/bin/.;
+        $(ECHO) '$(BUILD_HOME)/$(Project)/rct/bin/'
+        for i in $(BUILD_HOME)/$(Project)/rct/bin/*.exe; do mv "$$i" "$${i%.exe}";done
+
+#rename 's/\.exe$//' *.exe

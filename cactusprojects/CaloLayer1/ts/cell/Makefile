@@ -1,39 +1,55 @@
-BUILD_HOME:=$(shell pwd)/../../..
-
--include $(BUILD_HOME)/config/Makefile.macros
-SWATCH_PREFIX=$(shell pwd)/../../swatch
+#############################################################################
+# CaloLayer1 Trigger Supervisor Cell					    #
+# Nate Woods, U. Wisconsin						    #
+#############################################################################
+BUILD_HOME:=$(shell pwd)/../../../..
+XDAQ_ROOT:=/opt/xdaq
 
 include $(XDAQ_ROOT)/config/mfAutoconf.rules
 include $(XDAQ_ROOT)/config/mfDefs.$(XDAQ_OS)
 
-Project=cactuscore
-Package=swatchcell/CaloLayer1
+include $(XDAQ_ROOT)/config/mfDefs.extern_coretools
+include $(XDAQ_ROOT)/config/mfDefs.coretools
 
+-include $(BUILD_HOME)/config/Makefile.macros
+
+CACTUS_HOME:=/opt/cactus
+SWATCH_HOME:=$(CACTUS_HOME)/include/swatch
+
+Project=cactusprojects
+Package=CaloLayer1/ts/cell
+PackageName=CaloLayer1TSCell
+
+Description=Calo Layer 1 TS Cell
+Summary=
+Authors=Nate Woods, Tyler Ruggles
+Link=
+
+PACKAGE_VER_MAJOR=0
+PACKAGE_VER_MINOR=1
+PACKAGE_VER_PATCH=0
+
+Executables=
 Sources=\
-        Cell.cc\
-        version.cc
+        version.cc\
+        Cell.cc
 
 IncludeDirs = \
-        $(BUILD_HOME)/$(Project)/swatchcell/framework/include \
-        $(CACTUS_ROOT)/include \
+        $(CACTUS_HOME)/include \
         $(XDAQ_ROOT)/include \
-        $(SWATCH_PREFIX)/core/include \
-        $(SWATCH_PREFIX)/processor/include \
-        $(SWATCH_PREFIX)/system/include
-        
+        $(SWATCH_HOME)/core \
+        $(SWATCH_HOME)/processor \
+        $(SWATCH_HOME)/system \
+        $(BUILD_HOME)/UCT2016
 
-UserCCFlags = -g 
+UserCCFlags = -g
 
 DependentLibraryDirs = \
         $(BUILD_HOME)/$(Project)/swatchcell/framework/lib/$(XDAQ_OS)/$(XDAQ_PLATFORM) \
-        $(CACTUS_ROOT)/lib \
         $(XDAQ_ROOT)/lib \
-        $(SWATCH_PREFIX)/core/lib \
-        $(SWATCH_PREFIX)/processor/lib \
-        $(SWATCH_PREFIX)/system/lib \
-        $(SWATCH_PREFIX)/amc13/lib \
-        $(SWATCH_PREFIX)/mp7/lib
-        
+        $(CACTUS_HOME)/lib \
+        $(BUILD_HOME)/UCT2016
+
 
 DependentLibraries = \
                 tsframework \
@@ -43,13 +59,10 @@ DependentLibraries = \
                 log4cplus \
                 cactus_swatch_core \
                 cactus_swatch_system \
-                cactus_swatch_amc13 \
-                cactus_swatch_mp7 \
                 swatchcellframework
 
-DynamicLibrary= swatchcellCaloLayer1
+DynamicLibrary= CaloLayer1TSCell
 
 
 include $(XDAQ_ROOT)/config/Makefile.rules
 include $(XDAQ_ROOT)/config/mfRPM.rules
-

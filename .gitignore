@@ -26,3 +26,9 @@
 *.exe
 *.out
 *.app
+
+# Emacs temp files
+*~
+
+# TS structure
+*linux*
