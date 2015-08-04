@@ -21,6 +21,9 @@ echo "Setting up environment for $domain"
 #Calo Layer 1
 export CALOLAYER1=$BUILD_HOME/ts/cell/
 
+#MKDEP
+export MKDEPDIR=$BUILD_HOME/mkdep_makefile/
+
 echo SWATCH Calo Layer 1 2015-08-04 environment loaded
 
 #EOF
