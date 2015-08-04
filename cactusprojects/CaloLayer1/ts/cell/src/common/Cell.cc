@@ -11,6 +11,6 @@ CaloStage1TSCell::Cell::~Cell()
 {}
 
 
-void CaloStage1TSCell::Cell::Init()
+void CaloStage1TSCell::Cell::init()
 {}
 
