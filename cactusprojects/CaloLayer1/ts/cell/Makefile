@@ -1,6 +1,6 @@
 #############################################################################
-# CaloLayer1 Trigger Supervisor Cell					    #
-# Nate Woods, U. Wisconsin						    #
+# CaloLayer1 Trigger Supervisor Cell                                        #
+# Nate Woods, U. Wisconsin                                                  #
 #############################################################################
 BUILD_HOME:=$(shell pwd)/../../../..
 XDAQ_ROOT:=/opt/xdaq
@@ -31,36 +31,36 @@ PACKAGE_VER_PATCH=0
 
 Executables=
 Sources=\
-        version.cc\
-        Cell.cc
+	version.cc\
+	Cell.cc
 
 IncludeDirs = \
-        $(BUILD_HOME)/$(Project)/$(Package)/include \
-        $(CACTUS_HOME)/include \
-        $(XDAQ_ROOT)/include \
-        $(SWATCH_HOME)/core \
-        $(SWATCH_HOME)/processor \
-        $(SWATCH_HOME)/system \
-        $(BUILD_HOME)/UCT2016
+	$(BUILD_HOME)/$(Project)/$(Package)/include \
+	$(CACTUS_HOME)/include \
+	$(XDAQ_ROOT)/include \
+	$(SWATCH_HOME)/core \
+	$(SWATCH_HOME)/processor \
+	$(SWATCH_HOME)/system \
+	$(BUILD_HOME)/UCT2016
 
 UserCCFlags = -g
 
 DependentLibraryDirs = \
-        $(BUILD_HOME)/$(Project)/swatchcell/framework/lib/$(XDAQ_OS)/$(XDAQ_PLATFORM) \
-        $(XDAQ_ROOT)/lib \
-        $(CACTUS_HOME)/lib \
-        $(BUILD_HOME)/UCT2016
+	$(BUILD_HOME)/$(Project)/swatchcell/framework/lib/$(XDAQ_OS)/$(XDAQ_PLATFORM) \
+	$(XDAQ_ROOT)/lib \
+	$(CACTUS_HOME)/lib \
+	$(BUILD_HOME)/UCT2016
 
 
 DependentLibraries = \
-                tsframework \
-                tstoolbox \
-                tsajaxell \
-                tsitf \
-                log4cplus \
-                cactus_swatch_core \
-                cactus_swatch_system \
-                swatchcellframework
+	tsframework \
+	tstoolbox \
+	tsajaxell \
+	tsitf \
+	log4cplus \
+	cactus_swatch_core \
+	cactus_swatch_system \
+	swatchcellframework
 
 DynamicLibrary= CaloLayer1TSCell
 
