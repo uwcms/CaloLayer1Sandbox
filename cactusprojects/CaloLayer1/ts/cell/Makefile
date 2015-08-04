@@ -35,6 +35,7 @@ Sources=\
         Cell.cc
 
 IncludeDirs = \
+        $(BUILD_HOME)/$(Project)/$(Package)/include \
         $(CACTUS_HOME)/include \
         $(XDAQ_ROOT)/include \
         $(SWATCH_HOME)/core \

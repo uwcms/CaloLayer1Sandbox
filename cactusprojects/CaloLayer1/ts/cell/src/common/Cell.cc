@@ -1,4 +1,4 @@
-#include "CaloStage1/ts/cell/Cell.h"
+#include "CaloLayer1/ts/cell/Cell.h"
 
 XDAQ_INSTANTIATOR_IMPL(CaloStage1TSCell::Cell)
 
