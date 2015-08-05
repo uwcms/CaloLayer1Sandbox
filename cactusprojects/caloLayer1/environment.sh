@@ -10,26 +10,21 @@ export BUILD_HOME=$setupFileDir
 
 echo Loading environment for $setupFileDir
 
-export RCT_BASE_HOME=$BUILD_HOME
-
-
-
 domain=`hostname -d`
 echo "Setting up environment for $domain"
 
+# TS Cell
+export TSCELL_HOME=$BUILD_HOME/ts/cell
 
-#Calo Layer 1
-export CALOLAYER1=$BUILD_HOME/cactusprojects/CaloLayer1/ts/cell/
+# MKDEP
+export MKDEPDIR=$BUILD_HOME/mkdep_makefile
 
-#MKDEP
-export MKDEPDIR=$BUILD_HOME/mkdep_makefile/
-
-#UCT2016
-export UCT2016=$BUILD_HOME/UCT2016
+# CTP7
+export CTP7_HOME=$CALOLAYER1_HOME/ctp7
 
 #Append 'bin' path
 export PATH=$PATH:/$BUILD_HOME/bin
 
-echo SWATCH Calo Layer 1 2015-08-04 environment loaded
+echo SWATCH Calo Layer 1 2015-08-05 environment loaded
 
 #EOF

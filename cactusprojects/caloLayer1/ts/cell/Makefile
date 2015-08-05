@@ -17,8 +17,8 @@ CACTUS_HOME:=/opt/cactus
 SWATCH_HOME:=$(CACTUS_HOME)/include/swatch
 
 Project=cactusprojects
-Package=CaloLayer1/ts/cell
-PackageName=CaloLayer1TSCell
+Package=caloLayer1/ts/cell
+PackageName=caloLayer1TSCell
 
 Description=Calo Layer 1 TS Cell
 Summary=
@@ -41,7 +41,7 @@ IncludeDirs = \
 	$(SWATCH_HOME)/core \
 	$(SWATCH_HOME)/processor \
 	$(SWATCH_HOME)/system \
-	$(BUILD_HOME)/UCT2016
+	$(BUILD_HOME)/ctp7
 
 UserCCFlags = -g
 
@@ -49,7 +49,7 @@ DependentLibraryDirs = \
 	$(BUILD_HOME)/$(Project)/swatchcell/framework/lib/$(XDAQ_OS)/$(XDAQ_PLATFORM) \
 	$(XDAQ_ROOT)/lib \
 	$(CACTUS_HOME)/lib \
-	$(BUILD_HOME)/UCT2016
+	$(BUILD_HOME)/ctp7
 
 
 DependentLibraries = \
@@ -62,7 +62,7 @@ DependentLibraries = \
 	cactus_swatch_system \
 	swatchcellframework
 
-DynamicLibrary= CaloLayer1TSCell
+DynamicLibrary= caloLayer1TSCell
 
 
 include $(XDAQ_ROOT)/config/Makefile.rules

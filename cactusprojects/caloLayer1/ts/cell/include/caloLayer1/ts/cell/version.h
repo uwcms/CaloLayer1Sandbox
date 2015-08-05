@@ -1,5 +1,5 @@
-#ifndef _swatchcell_CaloLayer1_version_h_
-#define _swatchcell_CaloLayer1_version_h_
+#ifndef _swatchcell_caloLayer1_version_h_
+#define _swatchcell_caloLayer1_version_h_
 
 #include "config/PackageInfo.h"
 // !!! Edit this line to reflect the latest package version !!!

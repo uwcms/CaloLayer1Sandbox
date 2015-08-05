@@ -12,12 +12,12 @@ all:
 	if [ -d $(MKDEPDIR) ]; then cd $(MKDEPDIR); make; fi
 	$(ECHO)
 	$(ECHO)
-	$(ECHO) '==> Compiling UCT2016'
-	if [ -d $(UCT2016) ]; then cd $(UCT2016); make *; fi
+	$(ECHO) '==> Compiling CTP7'
+	if [ -d $(CTP7_HOME) ]; then cd $(CTP7_HOME); make *; fi
 	$(ECHO)
 	$(ECHO)
-	$(ECHO) '==> Compiling Calo Layer 1'
-	if [ -d $(CALOLAYER1) ]; then cd $(CALOLAYER1); make; fi
+	$(ECHO) '==> Compiling Trigger Supervisor'
+	if [ -d $(TSCELL_HOME) ]; then cd $(TSCELL_HOME); make; fi
 	$(ECHO)
 
 clean :
@@ -26,6 +26,6 @@ clean :
 	$(ECHO)
 	rm -f lib/*
 	rm -f bin/*
-	cd MKDEPDIR && make clean
-	cd CALOLAYER1 && make clean
-	cd UCT2016 && make clean
+	cd $(MKDEPDIR) && make clean
+	cd $(CTP7_HOME) && make clean
+	cd $(TSCELL_HOME) && make clean
