@@ -29,6 +29,9 @@
 
 # Emacs temp files
 *~
+*\#
 
-# TS structure
+# OSW structure
 *linux*
+bin*
+lib*
