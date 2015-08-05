@@ -12,5 +12,7 @@ CaloStage1TSCell::Cell::~Cell()
 
 
 void CaloStage1TSCell::Cell::init()
-{}
+{
+  addGenericSwatchComponents();
+}
 
