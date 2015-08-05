@@ -26,6 +26,6 @@ clean :
 	$(ECHO)
 	rm -f lib/*
 	rm -f bin/*
-	cd $(MKDEPDIR) && make clean
+	#cd $(MKDEPDIR) && make clean # Removed b/c mkdep cleans as it makes
 	cd $(CTP7_HOME) && make clean
 	cd $(TSCELL_HOME) && make clean
