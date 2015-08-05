@@ -1,5 +1,5 @@
 #include "config/version.h"
-#include "CaloLayer1/ts/cell/version.h"
+#include "caloLayer1/ts/cell/version.h"
 
 GETPACKAGEINFO(swatchcellCaloLayer1)
 
