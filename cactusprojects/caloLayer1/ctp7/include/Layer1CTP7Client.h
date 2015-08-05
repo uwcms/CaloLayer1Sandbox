@@ -1,7 +1,7 @@
 #ifndef Layer1CTP7Client_h
 #define Layer1CTP7Client_h
 
-#include "caloLayer1/ctp7/include/Layer1CTP7.h"
+#include "Layer1CTP7.h"
 
 class Layer1CTP7Client : public Layer1CTP7 {
 

@@ -1,4 +1,4 @@
-#include "caloLayer1/ctp7/include/Layer1CTP7Client.h"
+#include "Layer1CTP7Client.h"
 
 int main(int argc, char **argv) {
   Layer1CTP7Client ctp7Client;

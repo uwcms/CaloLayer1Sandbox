@@ -13,6 +13,7 @@ Sources =\
 	testLayer1CTP7.cpp
 
 IncludeDirs=\
+	$(BUILD_HOME)/$(Project)/$(Package)/include \
 	$(XDAQ_ROOT)/include
 
 UserCFlags= -g -DLINUX -fPIC
@@ -23,7 +24,7 @@ UserCCFlags=\
 UserDynamicLinkFlags=
 
 DependentLibraryDirs=\
-	$(XDAQ_ROOT)/lib\
+	$(XDAQ_ROOT)/lib
 
 DependentLibraries=
 
