@@ -13,7 +13,7 @@ all:
 	$(ECHO)
 	$(ECHO)
 	$(ECHO) '==> Compiling CTP7'
-	if [ -d $(CTP7_HOME) ]; then cd $(CTP7_HOME); make *; fi
+	if [ -d $(CTP7_HOME) ]; then cd $(CTP7_HOME); make; fi
 	$(ECHO)
 	$(ECHO)
 	$(ECHO) '==> Compiling Trigger Supervisor'

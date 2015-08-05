@@ -8,7 +8,7 @@ SHELL=/bin/sh
 build:  move
 
 move:
-        $(ECHO) '==> Copying library in $(Project)/rct/lib'
-        $(CP) $(BUILD_HOME)/$(Project)/$(Package)/lib/$(XDAQ_OS)/$(XDAQ_PLATFORM)/* $(BUILD_HOME)/$(Project)/rct/lib/.;
-        $(RM) $(BUILD_HOME)/$(Project)/$(Package)/lib/$(XDAQ_OS)/$(XDAQ_PLATFORM)/*;
-        $(ECHO)
+	$(ECHO) '==> Copying library in $(Project)/rct/lib'
+	$(CP) $(BUILD_HOME)/$(Project)/$(Package)/lib/$(XDAQ_OS)/$(XDAQ_PLATFORM)/* $(BUILD_HOME)/$(Project)/rct/lib/.;
+	$(RM) $(BUILD_HOME)/$(Project)/$(Package)/lib/$(XDAQ_OS)/$(XDAQ_PLATFORM)/*;
+	$(ECHO)

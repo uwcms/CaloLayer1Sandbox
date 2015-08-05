@@ -22,6 +22,9 @@ export MKDEPDIR=$BUILD_HOME/mkdep_makefile
 # CTP7
 export CTP7_HOME=$BUILD_HOME/ctp7
 
+# XDAQ
+export XDAQ_ROOT=/opt/xdaq/
+
 #Append 'bin' path
 export PATH=$PATH:/$BUILD_HOME/bin
 
