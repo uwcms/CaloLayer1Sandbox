@@ -20,7 +20,7 @@ export TSCELL_HOME=$BUILD_HOME/ts/cell
 export MKDEPDIR=$BUILD_HOME/mkdep_makefile
 
 # CTP7
-export CTP7_HOME=$CALOLAYER1_HOME/ctp7
+export CTP7_HOME=$BUILD_HOME/ctp7
 
 #Append 'bin' path
 export PATH=$PATH:/$BUILD_HOME/bin
