@@ -32,10 +32,10 @@ export LD_LIBRARY_PATH=/opt/xdaq/lib:/opt/cactus/lib:$LD_LIBRARY_PATH
 
 HERE=$(python -c "import os.path; print os.path.dirname(os.path.abspath('$BASH_SOURCE'))")
 
-#SWATCH_ROOT=${HERE}/../../../swatch
-SWATCH_ROOT=${HERE}/../../.. # I think this is correct, we want to be at 'caloLayer1'
+SWATCH_ROOT=/opt/cactus/include/swatch
+LOCAL_SWATCH_ROOT=${HERE}/../../.. # I think this is correct, we want to be at 'caloLayer1'
 export LD_LIBRARY_PATH=${SWATCH_ROOT}/logger/lib:${SWATCH_ROOT}/core/lib:${SWATCH_ROOT}/processor/lib:${SWATCH_ROOT}/system/lib:${LD_LIBRARY_PATH}
-export LD_LIBRARY_PATH=${SWATCH_ROOT}/ctp7/lib:${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH=${LOCAL_SWATCH_ROOT}/ctp7/lib:${LD_LIBRARY_PATH}
 
 export swatchexample_ROOT=${HERE}/..
 export swatchframework_ROOT=${swatchexample_ROOT}/../framework
