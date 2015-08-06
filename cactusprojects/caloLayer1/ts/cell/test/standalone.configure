@@ -8,13 +8,13 @@
 <!-- SWATCH WORKER CELL -->
  <xc:Context url="http://__HOSTNAME__PORT__">
 
-        <xc:Application class="swatchcellexample::Cell" id="13" instance="203" service="swatchexample-service" group="subsystem" network="local" publish="true" >
+        <xc:Application class="caloLayer1TSCell::Cell" id="13" instance="203" service="swatchexample-service" group="subsystem" network="local" publish="true" >
                         <properties xmlns="urn:xdaq-application:Cell" xsi:type="soapenc:Struct">
                             <name xsi:type="xsd:string">EXAMPLE SWATCH CELL</name>
                             <xhannelListUrl xsi:type="xsd:string">file://${swatchexample_ROOT}/test/standalone.xhannel</xhannelListUrl>
    </properties>
   </xc:Application>     
-     <xc:Module>file:///${swatchexample_ROOT}/lib/linux/x86_64_slc6/libswatchcellexample.so</xc:Module>
+     <xc:Module>file:///${swatchexample_ROOT}/lib/linux/x86_64_slc6/libcaloLayer1TSCell.so</xc:Module>
  </xc:Context>
 
 
